@@ -1,5 +1,10 @@
-
 <h1>hi it is portfolio</h1>
+
+{% load static %}
+
+<a href="">Resume</a>
+
+<img src="{% static 'portfolio/ariana-grande.jpg' %}">
 
 {% for project in projects %}
 
@@ -7,7 +12,7 @@
 <p>{{ project.description }}</p>
 <img src="{{ project.image.url }}">
 {% if project.url %}
-<a href="{{project.url }}">Link</a>
+<a href="{{ project.url }}">Link</a>
 {% endif %}
 
 
